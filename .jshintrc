@@ -1,0 +1,15 @@
+{
+	"smarttabs": true,
+	"quotmark": "double",
+	"curly": true,
+	"trailing": true,
+	"boss": true,
+	"eqnull": true,
+	"expr": true,
+	"browser": true,
+	"globals": {
+		"module": true,
+		"require": true,
+		"define": true
+	}
+}

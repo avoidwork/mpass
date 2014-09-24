@@ -1,0 +1,46 @@
+{
+  "name": "mpass",
+  "description": "Mnemonic password generator",
+  "version": "0.1.0",
+  "homepage": "http://avoidwork.github.io/mpass",
+  "author": {
+    "name": "Jason Mulligan",
+    "email": "jason.mulligan@avoidwork.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/avoidwork/mpass.git"
+  },
+  "bugs": {
+    "url": "https://github.com/avoidwork/mpass/issues"
+  },
+  "licenses": [
+    {
+      "type": "BSD-3",
+      "url": "https://raw.github.com/avoidwork/mpass/master/LICENSE"
+    }
+  ],
+  "main": "lib/mpass",
+  "engines": {
+    "node": ">=0.4.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "mwords": "~0.1.1"
+  },
+  "devDependencies": {
+    "grunt-cli": "~0.1.13",
+    "grunt": "~0.4.5",
+    "grunt-sed": "~0.1.1",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-watch": "~0.6.1"
+  },
+  "keywords": [
+    "mnemonic",
+    "password",
+    "generator"
+  ]
+}
