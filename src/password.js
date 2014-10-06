@@ -8,10 +8,11 @@
 function password ( n ) {
 	n          = n || 3;
 	var result = "",
-	    i      = -1;
+	    i      = -1,
+	    used   = {};
 
 	while ( ++i < n ) {
-		result += words[random( nth )];
+		result += words[random( nth, used )];
 	}
 
 	return result;
