@@ -1,6 +1,6 @@
 var mpass = require("../lib/mpass.js" ),
-    subs = [ 3, 0, 7, 1, "@", "$" ],
-    extra = [ "!", "#", "%" ];
+    subs = [ 3, 0, 7, 1 ],
+    extra = [ "!", "#", "%", "@", "$" ];
 
 exports["mpass"] = {
 	setUp: function (done) {
@@ -18,8 +18,10 @@ exports["mpass"] = {
 			subFound = false,
 			extraFound = false;
 
-		test.expect(4);
+		test.expect(6);
 		test.equal(x.length > 0, true, "Should be 'true'");
+		test.equal(/[A-Z]/.test(x), true, "Should be 'true'");
+		test.equal(/[0-9]/.test(x), true, "Should be 'true'");
 
 		subs.forEach(function ( i ) {
 			if ( !subFound && x.indexOf( i ) > -1 ) {

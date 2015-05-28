@@ -1,7 +1,7 @@
 {
   "name": "mpass",
   "description": "Mnemonic password generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "http://avoidwork.github.io/mpass",
   "author": {
     "name": "Jason Mulligan",

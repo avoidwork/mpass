@@ -14,7 +14,7 @@ function password ( n, special ) {
 	    used     = {},
 	    hasSub   = false,
 	    hasExtra = false,
-	    flip, word;
+	    flip, lth, pos, rnd, word;
 
 	function sub ( x, idx ) {
 		if ( !hasSub && word.indexOf( x ) > -1 ) {
@@ -29,16 +29,26 @@ function password ( n, special ) {
 			result += words[ random( nth, used ) ];
 		}
 	} else {
+		rnd = Math.floor( Math.random() * n );
+
 		while ( ++i < n ) {
 			word = words[ random( nth, used ) ];
 
-			// Capitalizing the first word
-			if ( i === 0 ) {
-				word = word.charAt( 0 ).toUpperCase() + word.slice( 1 );
-			}
+			// Capitalizing a letter in a word
+			if ( i === rnd ) {
+				lth = word.length;
+				pos = Math.floor( Math.random() * lth );
 
-			// Specializing the second half
-			if ( i >= ( n / 2 ) ) {
+				if ( pos === 0 ) {
+					word = word.charAt( 0 ).toUpperCase() + word.slice( 1 );
+				} else if ( pos < lth - 1 ) {
+					word = word.slice( 0, pos ) + word.charAt( pos ).toUpperCase() + word.slice( pos + 1, lth );
+				} else {
+					word = word.slice( 0, pos ) + word.charAt( pos ).toUpperCase();
+				}
+			}
+			// or specializing if in the second half
+			else if ( i >= ( n / 2 ) ) {
 				// Simulating a coin flip
 				flip = Math.random() >= 0.5 ? 1 : 0;
 
