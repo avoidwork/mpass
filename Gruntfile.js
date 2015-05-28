@@ -30,6 +30,9 @@ module.exports = function (grunt) {
 			},
 			src : "lib/<%= pkg.name %>.js"
 		},
+		nodeunit : {
+			all : ["test/*.js"]
+		},
 		sed : {
 			version : {
 				pattern : "{{VERSION}}",
@@ -57,10 +60,11 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks("grunt-sed");
 	grunt.loadNpmTasks("grunt-contrib-concat");
 	grunt.loadNpmTasks("grunt-contrib-jshint");
+	grunt.loadNpmTasks("grunt-contrib-nodeunit");
 	grunt.loadNpmTasks("grunt-contrib-watch");
 
 	// aliases
 	grunt.registerTask("build", ["concat", "sed"]);
-	grunt.registerTask("test", ["jshint"]);
+	grunt.registerTask("test", ["jshint", "nodeunit"]);
 	grunt.registerTask("default", ["build", "test"]);
 };

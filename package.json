@@ -1,7 +1,7 @@
 {
   "name": "mpass",
   "description": "Mnemonic password generator",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "homepage": "http://avoidwork.github.io/mpass",
   "author": {
     "name": "Jason Mulligan",
@@ -31,12 +31,13 @@
     "mwords": "~0.1.1"
   },
   "devDependencies": {
-    "grunt-cli": "~0.1.13",
     "grunt": "~0.4.5",
-    "grunt-sed": "~0.1.1",
+    "grunt-cli": "~0.1.13",
     "grunt-contrib-concat": "~0.5.0",
     "grunt-contrib-jshint": "~0.10.0",
-    "grunt-contrib-watch": "~0.6.1"
+    "grunt-contrib-nodeunit": "^0.4.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-sed": "~0.1.1"
   },
   "keywords": [
     "mnemonic",
