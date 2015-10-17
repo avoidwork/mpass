@@ -1,7 +1,7 @@
 {
   "name": "mpass",
   "description": "Mnemonic password generator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "http://avoidwork.github.io/mpass",
   "author": {
     "name": "Jason Mulligan",
@@ -28,7 +28,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "mwords": "~0.1.1"
+    "mwords": "~1.0.0"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
@@ -42,6 +42,7 @@
   "keywords": [
     "mnemonic",
     "password",
-    "generator"
+    "generator",
+    "memorable"
   ]
 }
