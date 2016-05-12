@@ -20,5 +20,5 @@ console.log(mpass(3, true)); // 3 random words & special characters, e.g. 'Extre
 ```
 
 ## License
-Copyright (c) 2015 Jason Mulligan
+Copyright (c) 2016 Jason Mulligan
 Licensed under the BSD-3 license
